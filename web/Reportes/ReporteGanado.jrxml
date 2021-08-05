@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="0" uuid="dbb87deb-a29d-4e58-8e74-b613efb3d35d">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#FFFFFF" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<parameter name="IdDuenio" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select*from ganado where Duenio=$P{IdDuenio}]]>
+	</queryString>
+	<field name="IdGanado" class="java.lang.Integer"/>
+	<field name="NumRegistro" class="java.lang.String"/>
+	<field name="Nombre" class="java.lang.String"/>
+	<field name="Raza" class="java.lang.String"/>
+	<field name="Sexo" class="java.lang.String"/>
+	<field name="EdadAprox" class="java.lang.Integer"/>
+	<field name="PesoAprox" class="java.lang.Float"/>
+	<field name="Estado" class="java.lang.String"/>
+	<field name="UbicacionGanado" class="java.lang.String"/>
+	<field name="PosLatitud" class="java.lang.Double"/>
+	<field name="PosLongitud" class="java.lang.Double"/>
+	<field name="Precio" class="java.math.BigDecimal"/>
+	<field name="Duenio" class="java.lang.Integer"/>
+	<field name="Imagen" class="java.lang.Object"/>
+	<background>
+		<band height="575" splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="104" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="0" width="802" height="67" uuid="28405985-293e-492f-8c05-0c3aca373597"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="54" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Ganados Registrados]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="142" y="67" width="568" height="37" uuid="dbeac6c3-ed97-4bb6-9bfd-ec73e7669590"/>
+				<textElement textAlignment="Right">
+					<font size="26"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="7" y="5" width="729" height="20" backcolor="#666666" uuid="94deac62-76e0-4f87-9e69-ca0aefa0518e"/>
+				<staticText>
+					<reportElement style="Column header" x="1" y="0" width="77" height="15" uuid="d48f5640-1e41-4fcf-9b66-62ee28be320c"/>
+					<text><![CDATA[NumRegistro]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="83" y="0" width="52" height="15" uuid="afad3a04-bd45-4bb6-b92f-e51ed45e8845"/>
+					<text><![CDATA[Nombre]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="146" y="0" width="41" height="15" uuid="73164bf7-8d6e-488c-b43e-d00d758a331c"/>
+					<text><![CDATA[Raza]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="205" y="0" width="37" height="15" uuid="76c6eae7-d0ba-4f93-948c-dcd5c09493f8"/>
+					<text><![CDATA[Sexo]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="254" y="0" width="71" height="15" uuid="6eb59b6d-9375-4903-80b3-86813a5d2245"/>
+					<text><![CDATA[EdadAprox]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="331" y="0" width="67" height="15" uuid="75a32027-6f2e-4597-b458-c47b61ea6e14"/>
+					<text><![CDATA[PesoAprox]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="418" y="0" width="62" height="15" uuid="a936a567-9178-43ae-8912-a582f96d368e"/>
+					<text><![CDATA[Estado]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="544" y="0" width="109" height="15" uuid="e9c93ca2-9b5f-41da-a61e-497df14a392b"/>
+					<text><![CDATA[UbicacionGanado]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<frame>
+				<reportElement x="7" y="1" width="705" height="15" uuid="4be3f518-1f4e-4395-b8dd-31cdb5f09f3b"/>
+				<textField>
+					<reportElement style="Detail" x="11" y="0" width="46" height="15" uuid="ebb8c9f9-1a3c-4d3e-9d8d-d0e871824a3f"/>
+					<textFieldExpression><![CDATA[$F{NumRegistro}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="79" y="0" width="56" height="15" uuid="565a1012-c04a-42ae-a4d1-f31e4048ced8"/>
+					<textFieldExpression><![CDATA[$F{Nombre}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="137" y="0" width="62" height="15" uuid="bd748b97-c82f-485c-844d-6b274b2684f8"/>
+					<textFieldExpression><![CDATA[$F{Raza}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="199" y="0" width="61" height="15" uuid="8b4e272a-b45d-4eeb-b8b4-08e38f772413"/>
+					<textFieldExpression><![CDATA[$F{Sexo}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="283" y="0" width="47" height="15" uuid="4cccd4f7-6ece-438d-a8bc-6c35daf24bc3"/>
+					<textFieldExpression><![CDATA[$F{EdadAprox}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="361" y="0" width="50" height="15" uuid="74578c47-6ae6-4fb0-8a73-c6612d315456"/>
+					<textFieldExpression><![CDATA[$F{PesoAprox}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="418" y="0" width="72" height="15" uuid="dac4a09d-4c85-420a-8939-6c38c8b5d20a"/>
+					<textFieldExpression><![CDATA[$F{Estado}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="500" y="0" width="203" height="15" uuid="5ea86b68-658f-4784-926b-c6e393e3ae5d"/>
+					<textFieldExpression><![CDATA[$F{UbicacionGanado}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="7" y="16" width="705" height="1" uuid="5e048269-cac9-4fd2-8ef1-0bc11b56a4d5"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="39" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="671" y="0" width="131" height="20" forecolor="#000000" uuid="e3c86287-9def-4a45-8a44-6a9ae7feaecf"/>
+				<textElement textAlignment="Right">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="97" y="0" width="267" height="20" uuid="474d10ef-672f-4aea-927f-31b5e16f5cb7"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Silhouette Title Report]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
