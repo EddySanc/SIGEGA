@@ -1,0 +1,74 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+#cuerpo{
+	background-image: url(../img/baner.jpg);
+	
+}
+
+
+.ghost-button{
+	display: inline-block;
+	width: 300px;
+	padding: 10x;
+	color: #FCFCFC;
+	border: 1px solid #fff;
+	outline: none;
+	text-decoration: none;
+}
+.ghost-button:hover,
+.ghost-button:active {
+	background-color:#84DC00;
+	color: #443778;
+}
+h1,p{
+	text-align: center;
+	
+}
+#cont{
+	
+	padding-top: 30px;
+	
+}
+#btn{
+	padding-top: 25px;
+	padding-bottom: 10px;
+}
+    
+#iniciar{
+    padding-top: 10px;
+}
+#mision{
+    
+    padding-top: 120px;
+}
+#mision1{
+    padding-top: 60px;
+}
+#pieMision{
+    
+    padding-top: 189px;
+}
+#vision1{
+    padding-top: 60px;
+}
+#pieVision{
+    
+    padding-top: 163px;
+}
+#pieValores{
+    
+    padding-top: 111px;
+}
+#producto{
+    padding-top: 90px;
+}
+#pieProducto{
+    
+    padding-top: 10px;
+}
+#contactanos{
+    
+    padding-top: 150px;
+}

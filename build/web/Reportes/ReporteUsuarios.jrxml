@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="0" uuid="6f61d956-30cd-4620-a7dc-2356e5123f75">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="516"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#FFFFFF" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM duenio]]>
+	</queryString>
+	<field name="Nombre" class="java.lang.String"/>
+	<field name="Apellidos" class="java.lang.String"/>
+	<field name="Direccion" class="java.lang.String"/>
+	<field name="Telefono" class="java.lang.String"/>
+	<field name="NombreUser" class="java.lang.String"/>
+	<field name="Estado" class="java.lang.String"/>
+	<background>
+		<band height="575" splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="104" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="0" width="802" height="67" uuid="625b3e6a-01f6-41b4-baa1-2c4e921f7bee"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="54" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Reporte de Personas Registradas]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="97" y="5" width="705" height="20" backcolor="#666666" uuid="023ec0b0-1b98-426c-a499-eedc8f42f3da"/>
+				<staticText>
+					<reportElement style="Column header" x="0" y="0" width="117" height="15" uuid="5846e5c0-4ffa-489b-8504-c7af8481d661"/>
+					<text><![CDATA[Nombre]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="117" y="0" width="117" height="15" uuid="f91e0e8e-781d-4b7f-acee-f0f4b135843e"/>
+					<text><![CDATA[Apellidos]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="234" y="0" width="117" height="15" uuid="891d96a0-e7a1-4735-a5c2-bf931763f869"/>
+					<text><![CDATA[Direccion]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="351" y="0" width="117" height="15" uuid="e3ff79c4-6771-4c27-8985-2a2d8f6fac17"/>
+					<text><![CDATA[Telefono]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="468" y="0" width="117" height="15" uuid="1da22c4e-efdf-4df4-a4f4-40d1728920dc"/>
+					<text><![CDATA[NombreUser]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="585" y="0" width="117" height="15" uuid="7fb3487d-1bfb-4d60-b909-6220555b9bce"/>
+					<text><![CDATA[Estado]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<frame>
+				<reportElement x="97" y="1" width="705" height="15" uuid="82b42798-48e3-4940-8f63-f53a87c5f6d5"/>
+				<textField>
+					<reportElement style="Detail" x="0" y="0" width="117" height="15" uuid="1fcabeac-01c3-49a8-83dc-8bd2a181ebba"/>
+					<textFieldExpression><![CDATA[$F{Nombre}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="117" y="0" width="117" height="15" uuid="09a154b9-1874-4032-92c6-9b7fb36f897c"/>
+					<textFieldExpression><![CDATA[$F{Apellidos}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="234" y="0" width="117" height="15" uuid="df12f5af-1225-4138-80df-a6ad6827c460"/>
+					<textFieldExpression><![CDATA[$F{Direccion}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="351" y="0" width="117" height="15" uuid="9624bb54-7857-43ad-bcc9-56217d916abc"/>
+					<textFieldExpression><![CDATA[$F{Telefono}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="468" y="0" width="117" height="15" uuid="d67e82a4-c21b-47a6-a460-36bd474715a6"/>
+					<textFieldExpression><![CDATA[$F{NombreUser}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="585" y="0" width="117" height="15" uuid="86c8d5c1-22a0-4332-90b1-ea0b9b26bd33"/>
+					<textFieldExpression><![CDATA[$F{Estado}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="97" y="16" width="705" height="1" uuid="bd8b37bb-d5f7-48d1-8e80-4b708dc20667"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="39" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="671" y="0" width="131" height="20" forecolor="#000000" uuid="06da5dba-b0ac-46d7-a25e-dd8ec3e3ff39"/>
+				<textElement textAlignment="Right">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="96" y="0" width="267" height="20" uuid="65baf2cf-f4f5-49d5-bf64-1bf4162206bd"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Silhouette Title Report]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
